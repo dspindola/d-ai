@@ -3,6 +3,9 @@
   "module": "index.ts",
   "type": "module",
   "private": true,
+  "scripts": {
+    "compile": "bun build --compile src/index.ts --outfile=./bin/d-ai --target=bun --format=esm --bytecode"
+  },
   "devDependencies": {
     "@types/react": "^19",
     "@types/react-dom": "^19",
