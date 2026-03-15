@@ -1,0 +1,32 @@
+# d-ai configuration
+# Run: bun src/index.ts [--preset <name>]
+
+default_preset: default
+
+presets:
+  default:
+    model: blackboxai/google/gemini-2.5-flash
+    system: |
+      You are a helpful assistant. Format your responses using Markdown —
+      use headings, code blocks, lists, and emphasis where appropriate.
+    temperature: 0.7
+
+  coder:
+    model: blackboxai/openai/gpt-5.3-codex
+    system: |
+      You are an expert software engineer. Always respond with clean, idiomatic code.
+      Use fenced code blocks with the correct language tag. Be concise and precise.
+    temperature: 0.2
+
+  creative:
+    model: blackboxai/anthropic/claude-sonnet-4.5
+    system: |
+      You are a creative writing assistant. Be expressive, imaginative, and engaging.
+      Use vivid language and varied sentence structure.
+    temperature: 1.0
+
+  fast:
+    model: blackboxai/google/gemini-2.5-flash-lite
+    system: |
+      You are a concise assistant. Give short, direct answers. No fluff.
+    temperature: 0.5
